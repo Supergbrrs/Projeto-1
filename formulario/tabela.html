@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela de Produtos</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Corpo da página */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    /* Container da tabela */
+    .container {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 24px;
+      width: 100%;
+      max-width: 700px;
+    }
+
+    /* Título */
+    h1 {
+      font-size: 20px;
+      color: #1a1a1a;
+      margin-bottom: 16px;
+    }
+
+    /* Tabela */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    /* Cabeçalho */
+    thead {
+      background-color: #F85E11;
+    }
+
+    thead th {
+      color: #ffffff;
+      font-size: 14px;
+      padding: 12px 16px;
+      text-align: left;
+    }
+
+    /* Linhas do corpo */
+    tbody tr {
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    /* Zebra — linhas alternadas */
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* Hover na linha */
+    tbody tr:hover {
+      background-color: #fff3ee;
+    }
+
+    /* Células */
+    tbody td {
+      font-size: 14px;
+      color: #333333;
+      padding: 12px 16px;
+    }
+
+    /* Badge de status */
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .badge.disponivel {
+      background-color: #e1f5ee;
+      color: #085041;
+    }
+
+    .badge.esgotado {
+      background-color: #faeeda;
+      color: #633806;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Tabela de Produtos</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Categoria</th>
+          <th>Preço</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>iPhone 17 Pro Max</td>
+          <td>Smartphone</td>
+          <td>R$ 9.399,00</td>
+          <td><span class="badge disponivel">Disponível</span></td>
+        </tr>
+        <tr>
+          <td>Fone Sony WH-1000XM5</td>
+          <td>Áudio</td>
+          <td>R$ 1.899,00</td>
+          <td><span class="badge disponivel">Disponível</span></td>
+        </tr>
+        <tr>
+          <td>PlayStation 5 Slim</td>
+          <td>Console</td>
+          <td>R$ 3.799,00</td>
+          <td><span class="badge esgotado">Esgotado</span></td>
+        </tr>
+        <tr>
+          <td>Capinha MagSafe iPhone</td>
+          <td>Acessório</td>
+          <td>R$ 129,00</td>
+          <td><span class="badge disponivel">Disponível</span></td>
+        </tr>
+        <tr>
+          <td>Monitor LG UltraWide</td>
+          <td>Periférico</td>
+          <td>R$ 2.499,00</td>
+          <td><span class="badge esgotado">Esgotado</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>

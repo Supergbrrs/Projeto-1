@@ -1,0 +1,25 @@
+/* sobre.css
+  - Estilos específicos para a página "Quem Somos".
+  - Complementa o tema principal em `loboshield.css`: tipografia e contraste do conteúdo.
+*/
+
+.container{max-width:900px;margin:32px auto;padding:0 16px}
+
+h1{font-size:2rem;margin:0 0 8px;color:#ffffff;font-family:'Oswald',sans-serif}
+
+.lead{font-size:1.125rem;color:#dcdcdc;margin-bottom:8px}
+
+section{margin-top:20px}
+section p{color:#ffffff;line-height:1.6}
+/* Tornar títulos das seções e links de contato em branco */
+h2{color:#ffffff}
+section a{color:#ffffff}
+ul{margin:8px 0 0 20px;color:#dcdcdc}
+ul li{margin-bottom:8px}
+
+.site-footer{border-top:1px solid rgba(255,255,255,0.06);padding:20px 0;text-align:center;color:#cfcfcf;margin-top:40px}
+
+@media (max-width:600px){
+  .container{margin:20px auto;padding:0 12px}
+  h1{font-size:1.5rem}
+}

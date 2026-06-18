@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lobo Shield</title>
+  <link rel="stylesheet" href="loboshield.css">
+</head>
+
+<body>
+
+  <header class="header">
+
+     <div class="logo-icon">
+        <img src="logo.png"
+             alt="Logo Icon"
+             class="logo-image">
+     </div>
+
+     <a href="loboshield.html" class="card-header">
+        <p>Home</p>
+     </a>
+
+     <a href="loboshield-servicos.html" class="card-header">
+        <p>Serviços</p>
+     </a>
+
+      <a href="sobre.html" class="card-header">
+        <p>Quem Somos</p>
+      </a>
+
+     <div class="theme-toggle">
+        <button id="theme-toggle-btn" aria-label="Alternar tema">🌙</button>
+     </div>
+
+     <a href="loboshield-cadastro.html" class="card-clientes">
+        <p>Área do Cliente</p>
+     </a>
+
+  </header>
+
+  <main>
+
+    <div class="banner-img">
+      <img src="banner.png"
+           alt="Banner Image"
+           class="banner-image">
+    </div>
+
+    <div class="content">
+
+      <div class="main-left">
+
+        <div class="text">
+          <h1>Entre em contato</h1>
+        </div>
+
+        <form action="#" method="POST">
+          <div class="text">
+            <label for="nome">Nome:</label>
+          </div>
+
+          <input type="text" id="nome" name="nome" class="textbox-card" placeholder="Digite seu nome">
+
+          <div class="text">
+            <label for="email">E-mail:</label>
+          </div>
+
+          <input type="email" id="email" name="email" class="textbox-card" placeholder="seuemail@exemplo.com">
+
+          <div class="text">
+            <label for="mensagem">Mensagem:</label>
+          </div>
+
+          <textarea id="mensagem" name="mensagem" class="textbox-card-large" placeholder="Como podemos ajudar?"></textarea>
+
+          <button type="submit" class="button" style="border: none; cursor: pointer; background: transparent; padding: 0;">
+            <div class="textbox-text">Enviar</div>
+          </button>
+        </form>
+
+        <div class="small-text">
+          Seus dados não serão utilizados para fins de propagandas ou spam.
+        </div>
+
+      </div>
+
+      <div class="center-image">
+        <img src="Home.png"
+             alt="Imagem grande"
+             class="center-image-img">
+      </div>
+
+      <aside class="sidebar">
+
+        <div class="sidebar-items">
+
+          <div class="sidebar-item">
+            <h1>Endereço</h1>
+            <p>Rua qualquer coisa, número XXXX, CEP: XXXXX-XXXX</p>
+          </div>
+
+          <div class="sidebar-item">
+            <h1>Telefone</h1>
+            <p>(XX) 91234-5678</p>
+          </div>
+
+          <div class="sidebar-item">
+            <h1>E-mail</h1>
+            <p>contato@loboshield.exemplo</p>
+          </div>
+
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>Mais segurança para a sua empresa.</p>
+    <p>&copy; 2026 Lobo Shield. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+
+</html>

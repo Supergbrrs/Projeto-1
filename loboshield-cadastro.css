@@ -1,0 +1,472 @@
+/* loboshield-cadastro.css
+    - Estilos para a página de cadastro.
+    - Inclui layout do header, banner, form de cadastro e estados de foco.
+*/
+/* Fonte e reset */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Main: área do formulário com fundo escuro */
+main {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    padding-bottom: 40px;
+}
+/* Footer simplificado */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1a1f2b;
+}
+/* Logo: container e imagem */
+.logo-icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    cursor: pointer;
+}
+.logo-icon img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+/* Header: navegação superior */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #000000;
+}
+/* Botões do header */
+.card-header {
+    height: 40px;
+    width: 100px;
+    background-color: #1a1f2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.card-header:hover{
+    background-color: #4d42a0;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+/* Botão área do cliente (posição fixa à direita) */
+.card-clientes {
+    position: absolute;
+    right: 50px;
+    height: 40px;
+    min-width: 140px;
+    background-color: #1a1f2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 16px;
+    margin: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+.card-clientes:hover{
+    background-color: #4d42a0;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+.card-clientes p{
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    line-height: 1;
+    text-align: center;
+}
+/* Banner: imagem hero mais compacta */
+.banner-img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    overflow: hidden;
+}
+.banner-img img {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+/* Títulos e parágrafos */
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 8px 0;
+}
+p{
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0;
+    font-family: 'Roboto', "Segoe UI", Tahoma, sans-serif;
+}
+.textbox-text{
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+.small-text{
+    position: relative;
+    margin-top: 32px;
+    color: white;
+    font-size: 0.6rem;
+    text-align: left;
+}
+/* Container do formulário de cadastro */
+.cadastro{
+    width: 100%;
+    max-width: 700px;
+    border-radius: 30px;
+    padding: 24px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255,255,255,0.25);
+}
+/* Inputs: estilo, foco e placeholder */
+.campo {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.campo label {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 4px;
+}
+.campo input {
+    width: 100%;
+    height: 45px;
+    border-radius: 30px;
+    border: 2px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 16px;
+    outline: none;
+    transition: border 0.2s ease, background 0.2s ease;
+}
+.campo input:focus {
+    border: 2px solid #4d42a0;
+    background: rgba(255,255,255,0.2);
+}
+.campo input::placeholder {
+    color: rgba(255,255,255,0.35);
+}
+.button{
+    width: 100%;
+    max-width: 100%;
+    height: 45px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: darkslateblue;
+    border: 2px solid rgba(255,255,255,0.25);
+    transition: background 0.2s ease, transform 0.15s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.button:hover{
+    background: darkblue;
+    transform: translateY(-2px);
+}
+/* loboshield-cadastro.css
+   - Estilos para a página de cadastro.
+   - Define layout do formulário, inputs, header e botões seguindo o tema.
+*/
+
+/* Fonte e reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Conteúdo principal: altura, alinhamento e fundo */
+main {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    padding-bottom: 40px;
+}
+
+/* Rodapé simples */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #1a1f2b;
+}
+
+/* Logo: container e imagem */
+.logo-icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    cursor: pointer;
+}
+
+.logo-icon img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Header e botões de navegação */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #000000;
+}
+
+.card-header {
+    height: 40px;
+    width: 100px;
+    background-color: #1a1f2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.card-header:hover{
+    background-color: #4d42a0;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+/* Botão área do cliente */
+.card-clientes {
+    position: absolute;
+    right: 50px;
+    height: 40px;
+    min-width: 140px;
+    background-color: #1a1f2b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 16px;
+    margin: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.card-clientes:hover{
+    background-color: #4d42a0;
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+.card-clientes p{
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Banner */
+.banner-img {
+    width: 100%;
+    height: 250px;
+    display: block;
+    overflow: hidden;
+}
+
+.banner-img img {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+/* Tipografia básica */
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 8px 0;
+}
+
+p{
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0;
+    font-family: 'Roboto', "Segoe UI", Tahoma, sans-serif;
+}
+
+.textbox-text{
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.small-text{
+    position: relative;
+    margin-top: 32px;
+    color: white;
+    font-size: 0.6rem;
+    text-align: left;
+}
+
+/* Container do formulário de cadastro */
+.cadastro{
+    width: 100%;
+    max-width: 700px;
+    border-radius: 30px;
+    padding: 24px 26px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255,255,255,0.25);
+}
+
+/* Estilo dos campos de input */
+.campo {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.campo label {
+    color: white;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 4px;
+}
+
+.campo input {
+    width: 100%;
+    height: 45px;
+    border-radius: 30px;
+    border: 2px solid rgba(255,255,255,0.25);
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 16px;
+    outline: none;
+    transition: border 0.2s ease, background 0.2s ease;
+}
+
+.campo input:focus {
+    border: 2px solid #4d42a0;
+    background: rgba(255,255,255,0.2);
+}
+
+.campo input::placeholder {
+    color: rgba(255,255,255,0.35);
+}
+
+.button{
+    width: 100%;
+    max-width: 100%;
+    height: 45px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: darkslateblue;
+    border: 2px solid rgba(255,255,255,0.25);
+    transition: background 0.2s ease, transform 0.15s ease;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.button:hover{
+    background: darkblue;
+    transform: translateY(-2px);
+}
+
+/* Responsividade geral para telas pequenas */
+@media (max-width: 720px) {
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 16px;
+    }
+    .card-clientes {
+        position: static;
+        right: auto;
+        margin-top: 8px;
+    }
+    .cadastro {
+        width: 90%;
+        padding: 24px 16px;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 20px;
+    }
+}

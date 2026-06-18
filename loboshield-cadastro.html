@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lobo Shield</title>
+  <link rel="stylesheet" href="loboshield-cadastro.css">
+</head>
+<body>
+  <header class="header">
+     <div class="logo-icon">
+        <img src="logo.png" alt="Logo Icon" class="logo-image">
+     </div>
+     <a href="loboshield.html" class="card-header"><p>Home</p></a>
+     <a href="loboshield-servicos.html" class="card-header"><p>Serviços</p></a>
+    <a href="sobre.html" class="card-header"><p>Quem Somos</p></a>
+     <a href="loboshield-cadastro.html" class="card-clientes"><p>Área do Cliente</p></a>
+  </header>
+
+  <main>
+    <div class="banner-img">
+      <img src="banner.png" alt="Banner Image" class="banner-image">
+    </div>
+
+    <div class="text">
+      <h1>Faça seu cadastro em nosso site:</h1>
+    </div>
+
+    <form class="cadastro" action="#" method="POST">
+
+      <div class="campo">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome completo">
+      </div>
+
+      <div class="campo">
+        <label for="empresa">Empresa:</label>
+        <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa">
+      </div>
+
+      <div class="campo">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(XX) 9XXXX-XXXX">
+      </div>
+
+      <div class="campo">
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" id="cnpj" name="cnpj" placeholder="XX.XXX.XXX/XXXX-XX">
+      </div>
+
+      <div class="campo">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com">
+      </div>
+
+      <div class="campo">
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" placeholder="Crie uma senha">
+      </div>
+
+      <button type="submit" class="button" style="border: none; cursor: pointer; background: transparent; padding: 0;">
+        <div class="textbox-text">Registrar</div>
+      </button>
+
+      <div class="small-text">
+        Seus dados não serão utilizados para fins de propagandas ou spam.
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>Mais segurança para a sua empresa.</p>
+    <p>&copy; 2026 Lobo Shield. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="theme.js"></script>
+</body>
+</html>

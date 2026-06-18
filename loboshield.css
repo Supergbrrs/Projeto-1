@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --page-bg: #000000;
+    --header: #000000;
+    --card-bg: #1a1f2b;
+    --card-hover: #4d42a0;
+    --text: #ffffff;
+    --muted-text: #dcdcdc;
+    --panel-bg: rgba(255,255,255,0.15);
+    --panel-border: rgba(255,255,255,0.25);
+    --button-bg: darkslateblue;
+    --button-hover: darkblue;
+    --footer-bg: #1a1f2b;
+    --box-shadow: 0 10px 30px rgba(72,61,139,0.5), 0 0 80px rgba(72,61,139,0.35);
+}
+
+body {
+    font-family: 'Roboto', "Segoe UI", Tahoma, sans-serif;
+    background-color: var(--page-bg);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+body.light-theme {
+    --page-bg: #f4f5f9;
+    --header: #f8f9ff;
+    --card-bg: #edf0fa;
+    --card-hover: #c4c9e8;
+    --text: #111827;
+    --muted-text: #4b5563;
+    --panel-bg: rgba(255,255,255,0.85);
+    --panel-border: rgba(0,0,0,0.08);
+    --button-bg: #4d42a0;
+    --button-hover: #3a3185;
+    --footer-bg: #e5e7f2;
+    --box-shadow: 0 10px 30px rgba(64,64,122,0.15), 0 0 80px rgba(64,64,122,0.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout principal: define fluxo vertical da página e fundo escuro */
+main {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--page-bg);
+    padding-bottom: 40px;
+}
+
+/* Rodapé: área de informações finais */
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--footer-bg);
+}
+
+/* Logo: container e tamanho da imagem do logotipo */
+.logo-icon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Imagem do logo: tamanho e cobertura */
+.logo-icon img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* Header: barra superior com navegação */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--header);
+    position: relative;
+}
+
+.theme-toggle {
+    position: absolute;
+    right: 190px;
+}
+
+.theme-toggle button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: var(--card-bg);
+    color: var(--text);
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle button:hover {
+    transform: translateY(-1px);
+    background: var(--card-hover);
+}
+
+/* Botões de navegação no header (estilo de 'card') */
+.card-header {
+    height: 40px;
+    width: 100px;
+    background-color: var(--card-bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+/* Hover para botões do header */
+.card-header:hover{
+    background-color: var(--card-hover);
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+/* Botão 'Área do Cliente' */
+.card-clientes {
+    position: absolute;
+    right: 50px;
+    height: 40px;
+    min-width: 140px;
+    background-color: var(--card-bg);
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 16px;
+    margin: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+/* Hover para área do cliente */
+.card-clientes:hover{
+    background-color: var(--card-hover);
+    cursor: pointer;
+    transform: translateY(-2px);
+}
+
+/* Ajustes de texto dentro do botão de clientes */
+.card-clientes p{
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    line-height: 1;
+    text-align: center;
+}
+
+/* Banner principal: imagem hero na página */
+.banner-img {
+    width: 100%;
+    height: 500px;
+    display: block;
+}
+
+/* Imagem do banner: cobertura e corte */
+.banner-img img {
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Títulos principais com fonte Oswald */
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 8px 0;
+}
+
+/* Parágrafos: cor e fonte principal */
+p{
+    color: var(--text);
+    font-size: 1rem;
+    text-align: left;
+    margin: 0;
+    font-family: 'Roboto', "Segoe UI", Tahoma, sans-serif;
+}
+
+/* Espaçamento extra abaixo das labels (ex: Nome:) e títulos */
+.text {
+    margin-bottom: 12px;
+}
+
+/* Texto dentro de botões */
+.textbox-text{
+    text-align: center;
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+/* Texto auxiliar/observações */
+.small-text{
+    position: relative;
+    margin-top: 0.10px;
+    color: var(--text);
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* Cartões estilizados usados em formulários e inputs */
+.textbox-card{
+    width: 100%;
+    max-width: 100%;
+    height: 55px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255,255,255,0.25);
+    box-shadow:
+        0 10px 30px rgba(72,61,139,0.5),
+        0 0 80px rgba(72,61,139,0.35);
+    transform-style: preserve-3d;
+    transition: 0.6s;
+    align-self: flex-start;
+    padding: 0 20px;
+    box-sizing: border-box;
+    color: var(--text);
+    font-size: 1.1rem;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+/* Hover nos cartões */
+.textbox-card:hover{
+    background: rgba(255,255,255,0.25);
+    border: 2px solid rgba(255,255,255,0.35);
+    box-shadow:
+        0 10px 30px rgba(72,61,139,0.7),
+        0 0 80px rgba(72,61,139,0.5);
+}
+
+/* Cartão maior (ex.: textarea) */
+.textbox-card-large{
+    width: 100%;
+    max-width: 100%;
+    height: 240px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255,255,255,0.25);
+    box-shadow:
+        0 10px 30px rgba(72,61,139,0.5),
+        0 0 80px rgba(72,61,139,0.35);
+    transform-style: preserve-3d;
+    transition: 0.6s;
+    animation: floating 4s ease-in-out infinite;
+    cursor: pointer;
+    align-self: flex-start;
+    padding: 12px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+
+}
+/* Hover no cartão grande */
+.textbox-card-large:hover{
+    background: rgba(255,255,255,0.25);
+    border: 2px solid rgba(255,255,255,0.35);
+    box-shadow:
+        0 10px 30px rgba(72,61,139,0.7),
+        0 0 80px rgba(72,61,139,0.5);
+}
+
+/* Botões principais do site */
+.button{
+    width: 100%;
+    max-width: 100%;
+    height: 80px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--button-bg);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255,255,255,0.25);
+    transform-style: preserve-3d;
+    transition: 0.6s;
+    cursor: pointer;
+    align-self: flex-start;
+    color: var(--text);
+}
+
+/* Hover nos botões */
+.button:hover{
+    background: var(--button-hover);
+}
+
+/* Layout de conteúdo: coluna principal + sidebar */
+.content{
+    display: flex;
+    gap: 30px;
+    padding: 20px 5%;
+    align-items: center;
+    position: relative;
+}
+
+/* Coluna principal (textos, formulários) */
+.main-left{
+    flex: 1 1 0;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    padding-left: 8%;
+}
+
+/* Área para imagem central/ilustração */
+.center-image{
+    flex: 0 0 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+/* Estilo da imagem central */
+.center-image-img{
+    width: 280px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Sidebar lateral com informações de contato */
+.sidebar{
+    flex: 1 1 0;
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-end;
+    padding-right: 8%;
+}
+
+/* Textos dentro da sidebar */
+.sidebar-text{
+    max-width: 320px;
+}
+
+/* Itens da sidebar (blocos) */
+.sidebar-items{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Títulos dentro da sidebar */
+.sidebar-item h1{
+    margin: 0;
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Parágrafos dentro da sidebar */
+.sidebar-item p{
+    margin: 6px 0 0 0;
+    color: var(--muted-text);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+/* Subtítulos opcionais na sidebar */
+.sidebar-text h3{
+    color: var(--text);
+    font-size: 1.25rem;
+}
+
+/* Parágrafos auxiliares na sidebar */
+.sidebar-text p{
+    color: var(--muted-text);
+    line-height: 1.4;
+}
+
+/* Resposividade: empilha colunas em telas pequenas */
+@media (max-width: 720px){
+    .header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 16px;
+    }
+
+    .theme-toggle,
+    .card-clientes {
+        position: static;
+        right: auto;
+        margin-top: 8px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .content{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .main-left{
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .sidebar{
+        position: static;
+        transform: none;
+        width: 100%;
+        max-width: none;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 0;
+    }
+
+    .banner-img,
+    .banner-img img {
+        height: 250px;
+    }
+
+    .center-image{
+        width: 100%;
+    }
+
+    .center-image-img{
+        width: 100%;
+        max-width: 420px;
+    }
+}
